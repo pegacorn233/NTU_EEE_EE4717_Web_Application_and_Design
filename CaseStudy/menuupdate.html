@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaJam Coffee House</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="javajam.css">
+<script type="text/javascript" src="menu.js"></script>
+
+<style type="text/css">
+	tr:nth-child(odd) {background-color: #e0b385 }
+	td:nth-child(2) {
+	font-weight: bold;
+	text-align: center;
+	width: 150px;
+	height: 60px;
+}
+	td:nth-child(3) {
+	height: 60px;
+	padding-left: 15px;
+}
+  td:nth-child(4){
+    width: 20px;
+}
+  td:nth-child(5){
+    text-align: left;
+    padding-right: 15px;
+  }
+</style>
+
+</head>
+
+<body>
+  <form action="update.php" method="post">
+    <div id="wrapper">
+  
+    <header>
+      <img src="javalogo.gif" alt="JavaJam" width=80% height=20%>
+    </header>
+
+    <div id="leftcolumn">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a id="selected" href="javascript:;">Menu</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+  	</ul>
+    </nav>	
+    </div>
+    
+    <div id="rightcolumn">
+
+      <h1>Coffee at JavaJam</h1>
+
+      <table id="menutable">
+      	<tr>	
+          <td><input type="checkbox" name="chk" id="java1" onclick="changep()"/>&nbsp</td>
+      		<td>Just Java</td>
+      		<td>Regular house blend, decaffieinated coffee, or flavour of the day <br> Endless Cup $<input type="number" name="javap" id="javap" value="2.00" min="0" step="0.01" disabled="true"></td>
+
+      	</tr>
+
+      	<tr>
+          <td><input type="checkbox" name="chk" id="cafe2" onclick="changep()"/>&nbsp</td>
+      		<td>Cafe au Lait</td>
+      		<td>House blend coffee infuesd into a smooth, steamed milk <br>
+            Single $<input type="number" name="cafesp" id="cafesp" value="2.00" min="0" step="0.01" disabled="true">
+            <br>Double $<input type="number" name="cafedp" id="cafedp" value="3.00" min="0" step="0.01" disabled="true">
+          </td>
+      	</tr>
+
+      	<tr>
+          <td><input type="checkbox" name="chk" id="capp3" onclick="changep()"/>&nbsp</td>
+      		<td>Inced Cappuccino</td>
+      		<td>Sweetened espresso blended with icy-cold milk served in a chilled glass <br>
+            Single $<input type="number" name="cappsp" id="cappsp" value="4.75" min="0" step="0.01" disabled="true">
+            <br>Double $<input type="number" name="cappdp" id="cappdp" value="5.75" min="0" step="0.01" disabled="true">
+          </td>
+      	</tr>
+      </table>
+
+
+        <input type="submit" value="Update">
+     
+
+    </div>
+
+    	<footer id="footer">	
+  		<small><i>Copyright &copy; JavaJam Coffee House</i></small><br>
+  		<small><i><a href="mailto:huijing@Liu.com">huijing@Liu.com</a></i></small>
+      </footer>
+      </div>
+  </form>
+</body>
+</html>

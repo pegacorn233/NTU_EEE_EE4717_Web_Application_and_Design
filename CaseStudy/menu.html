@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaJam Coffee House</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="javajam.css">
+<script type="text/javascript" src="menu.js"></script>
+
+<style type="text/css">
+	tr:nth-child(odd) {background-color: #e0b385 }
+	td:nth-child(1) {
+	font-weight: bold;
+	text-align: center;
+	width: 150px;
+  height: 60px;
+
+}
+	td:nth-child(2) {
+  height: 60px;
+	padding-left: 15px;
+}
+  td:nth-child(3){
+    width: 20px;
+}
+  td:nth-child(4){
+    text-align: left;
+    padding-right: 15px;
+  }
+</style>
+
+<?php include "renew.php";?>
+</head>
+
+<body>
+
+      <div id="wrapper">
+        
+        <header>
+          <img src="javalogo.gif" alt="JavaJam" width=80% height=20%>
+        </header>
+
+        <div id="leftcolumn">
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a id="selected" href="javascript:;">Menu</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+      	</ul>
+        </nav>	
+        </div>
+        
+        <div id="rightcolumn">
+
+          <h1>Coffee at JavaJam</h1>
+
+          <table id="menutable">
+          	<tr>	
+          		<td>Just Java</td>
+          		<td>Regular house blend, decaffieinated coffee, or flavour of the day <br> Endless Cup $<input type="number" name="price" id="javap" value="<?php echo $javap1; ?>" min="0" readonly></td>
+              <td>
+                <input type="number" name="Endless Cup" id="endless"value="0" min="0" onchange="cost()">
+              </td>
+              <td align="left"><p id="subjava">Subtotal:$0</p></td>
+          	</tr>
+
+          	<tr>
+          		<td>Cafe au Lait</td>
+          		<td>House blend coffee infuesd into a smooth, steamed milk <br>
+                <input type="radio" name="cafe" id="cafesingle" value="2">Single $<input type="number" name="price" id="cafesp" value="<? = $cafesp2 ?>" min="0" disabled="true">
+                <br><input type="radio" name="cafe" id="cafedouble" value="3">Double $<input type="number" name="price" id="cafedp" value="<? = $cafedp3 ?>" min="0" disabled="true">
+              </td>
+              <td>
+                <input type="number" id="cafenum" value="0" min="0" onclick="cost()">
+              </td>
+              <td align="left"><p id="subcafe">Subtotal:$0</p></td>
+          	</tr>
+
+          	<tr>
+          		<td>Inced Cappuccino</td>
+          		<td>Sweetened espresso blended with icy-cold milk served in a chilled glass <br>
+                <input type="radio" name="capp" id="cappsingle" value="4.75">Single $<input type="number" name="price" id="cappsp" value="<? = $cappsp4 ?>" min="0" disabled="true">
+                <br><input type="radio" name="capp" id="cappdouble" value="5.75">Double $<input type="number" name="price" id="cappdp" value="<? = $cappdp5 ?>" min="0" disabled="true">
+              </td>
+              <td>
+                <input type="number" id="cappnum" value="0" min="0" onchange="cost()">
+              </td>
+              <td align="left"><p id="subcapp">Subtotal:$0</p></td>
+          	</tr>
+          </table>
+          <p id="total" style="float:right; margin-right: 60px"></p>
+
+        </div>
+
+        	<footer id="footer">	
+      		<small><i>Copyright &copy; JavaJam Coffee House</i></small><br>
+      		<small><i><a href="mailto:huijing@Liu.com">huijing@Liu.com</a></i></small>
+          </footer>
+      </div>
+
+</body>
+</html>
